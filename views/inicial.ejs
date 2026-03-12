@@ -11,9 +11,30 @@
 
     <ol>
         <% for (let index = 0; index <  listaPessoas.length; index++) {%>
-            <li></li>            
+            <li> [<%=(index + 1) %>] <%= listaPessoas[index].nome %> - <%= listaPessoas[index].email %></li>            
         <% } %>
-        <li></li>
     </ol>
+
+    <table border: 1px solid #cbd5e1; border-collapse: collapse; " border="1"> 
+    <thead>
+        <tr bgcolor = "#CCCCCC">
+            <th>Ordem</th>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (let index = 0; index <  listaPessoas.length; index++) {%>
+            <tr>
+                <td><%=(index + 1) %></td>
+                <td><%= listaPessoas[index].nome %></td>
+                <td><%= listaPessoas[index].email %></td>
+            </tr>            
+        <% } %>
+    </tbody>
+
+</table>
 </body>
+
+
 </html>
