@@ -8,6 +8,17 @@ export class AppController {
   @Get()
   @Render('inicial')
   getHello(): object {
-    return {titulo: 'AppWeb com NestJs'};
+    
+    let pessoas = [
+      {nome: 'Maria', email: 'maria@example.com'},
+      {nome: 'João', email: 'joao@example.com'},
+      {nome: 'Ana', email: 'ana@example.com'},
+      {nome: 'Pedro', email: 'pedro@example.com'}
+    ]
+    return { 
+      titulo: 'AppWeb com NestJs', 
+      horaAgora: new Date().toLocaleTimeString(),
+      listaPessoas: pessoas
+    };
   }
 }

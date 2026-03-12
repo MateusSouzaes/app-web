@@ -7,6 +7,13 @@
 </head>
 <body>
     <h1><%= titulo %></h1>
-    <h2>Este é um exemplo de aplicação usando o padrão MVC com NestJs e EJS.</h2>
+    <h2>NestJs MVC + EJS <%= horaAgora %>.</h2>
+
+    <ol>
+        <% for (let index = 0; index <  listaPessoas.length; index++) {%>
+            <li></li>            
+        <% } %>
+        <li></li>
+    </ol>
 </body>
 </html>
