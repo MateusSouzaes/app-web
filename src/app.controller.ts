@@ -21,4 +21,12 @@ export class AppController {
       listaPessoas: pessoas
     };
   }
+  @Get('login')
+  @Render('autenticacao/login')
+  getLogin(): object {
+    return {
+      titulo: 'Login',
+    };
+  }
 }
+
