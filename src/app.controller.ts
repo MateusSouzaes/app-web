@@ -8,8 +8,7 @@ export class AppController {
   @Get()
   @Render('inicial')
   getHello(): object {
-
-    let pessoas = [
+    const pessoas = [
       { nome: 'João Teixeira', email: 'joao.teixeira@ifro.edu.br' },
       { nome: 'Reinaldo Pereira', email: 'reinaldo.pereira@ifro.edu.br' },
       { nome: 'Jackson Henrique', email: 'jackson.henrique@ifro.edu.br' },
@@ -18,11 +17,10 @@ export class AppController {
       { nome: 'Geilson Guardia', email: 'gleison.guardia@ifro.edu.br' },
     ];
 
-
-    return { 
-      titulo: 'AppWeb com NestJs', 
+    return {
+      titulo: 'AppWeb com NestJs',
       horaAgora: new Date().toLocaleString('pt-BR'),
-      listaPessoas: pessoas
+      listaPessoas: pessoas,
     };
   }
 
@@ -30,7 +28,7 @@ export class AppController {
   @Render('_sobre')
   getSobre(): object {
     return {
-      titulo: 'Seção de informações do sistema web.'
+      titulo: 'Seção de informações do sistema web.',
     };
   }
 
