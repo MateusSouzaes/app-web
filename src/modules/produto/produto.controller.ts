@@ -1,12 +1,12 @@
-import { Controller, Get, Render } from '@nestjs/common';
+import { Controller, Get, Render } from "@nestjs/common";
 
-@Controller('produto')
+@Controller('produtos')
 export class ProdutoController {
-  @Get()
-  @Render('produto/inicial')
-  getProduto(): object {
-    return {
-      titulo: "Produtos - consulta"
+    @Get()
+    @Render('produto/inicial')
+    inicial(): object {
+        return {
+            titulo: 'Consulta de Produtos'
+        }
     }
-    };
- }
+}
